@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+/*
+=============== 
+Fonts
+===============
+*/
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary/main color */
+  --clr-primary-1: #f0b90b;
+  --clr-primary-2: #f8d12f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+=============== 
+Global Styles
+===============
+*/
+
+body {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*
+=============== 
+Hero Style
+===============
+*/
+
+.hero {
+  width: 100vw;
+  height: 25vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)),
+    center url("./images/bnb2.jpg");
+  color: white;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero-btn {
+  background-color: var(--clr-primary-1);
+  border-radius: 10px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.hero-btn-panel {
+  background-color: var(--clr-primary-1);
+  border-radius: 10px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.hero-btn:hover {
+  background-color: var(--clr-primary-2);
+}
+
+/*
+=============== 
+Tabs style
+===============
+*/
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: 5vh;
+  box-sizing: border-box;
+}
+
+.tab-btn {
+  background-color: var(--clr-primary-1);
+}
+
+.tab-btn:hover {
+  background-color: var(--clr-primary-2);
+}
+
+.tab-btn-active {
+  background-color: var(--clr-primary-2);
+}
+
+/*
+=============== 
+Lockers Styles
+===============
+*/
+
+.locker-container {
+  margin: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  min-height: calc(100vh - 25vh - 5vh - 3rem);
+  max-height: fit-content;
+  box-sizing: border-box;
+}
+.search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)),
+    center url("./images/locker2.jpeg");
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-locker {
+  display: block;
+  text-align: center;
+
+  width: 30%;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.locker-details {
+  display: grid;
+  place-items: center;
+  width: 60%;
+  margin: 5px;
+}
+
+.locker-details p {
+  hyphens: auto;
+}
+.newLocker {
+  text-align-last: center;
+  /* background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)),
+    center url("./images/chain3.jpg");
+  color: white; */
+}
+
+.newLocker input {
+  margin-bottom: 10px;
+}
+
+.newLockerForm {
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/*
+=============== 
+Media (max 500px) specific Styles
+===============
+*/
+
+@media screen and (max-width: 500px) {
+  .search {
+    display: block;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+
+  .search-locker {
+    width: 95%;
+    height: 30%;
+  }
+
+  .locker-details {
+    width: 95%;
+    height: 60%;
+    margin-top: 15px;
+  }
+}
+
+/*
+=============== 
+spinner icon
+===============
+*/
+
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/*
+=============== 
+status msg
+===============
+*/
+
+.loading-msg {
+  letter-spacing: 2px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: #d6dad4;
+}
+
+.error-msg {
+  letter-spacing: 2px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: #e45555;
 }
