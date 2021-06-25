@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bnb-locker/static/css/main.269d1841.chunk.css",
-    "main.js": "/bnb-locker/static/js/main.991d0670.chunk.js",
-    "main.js.map": "/bnb-locker/static/js/main.991d0670.chunk.js.map",
+    "main.js": "/bnb-locker/static/js/main.db33f2fd.chunk.js",
+    "main.js.map": "/bnb-locker/static/js/main.db33f2fd.chunk.js.map",
     "runtime-main.js": "/bnb-locker/static/js/runtime-main.2b1897ec.js",
     "runtime-main.js.map": "/bnb-locker/static/js/runtime-main.2b1897ec.js.map",
     "static/js/2.d07691cf.chunk.js": "/bnb-locker/static/js/2.d07691cf.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2b1897ec.js",
     "static/js/2.d07691cf.chunk.js",
     "static/css/main.269d1841.chunk.css",
-    "static/js/main.991d0670.chunk.js"
+    "static/js/main.db33f2fd.chunk.js"
   ]
 }
